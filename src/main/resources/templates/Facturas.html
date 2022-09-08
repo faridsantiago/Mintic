@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Facturas</title>
+</head>
+<body>
+    <div>
+        <h1 th:text="${titulo}"></h1>
+        <table border="1">
+
+            <tr>codigoFactura</tr>
+            <tr>tipoVehiculo</tr>
+            <tr>placa</tr>
+            <tr>tipoContrato</tr>
+            <tr>fechaEntrada</tr>
+            <tr>fechaSalida</tr>
+            <tr>valor</tr>
+            <tr>fechaFactura</tr>
+
+
+            <tr th:each="facturas: ${facturas}" >
+                <td th:text="${facturas.codigofactura}"  ></td>
+                <td th:text="${facturas.tipovehiculo}"  ></td>
+                <td th:text="${facturas.placa}"  ></td>
+                <td th:text="${facturas.tipocontrato}"  ></td>
+                <td th:text="${facturas.fechaentrada}"  ></td>
+                <td th:text="${facturas.fechasalida}"  ></td>
+                <td th:text="${facturas.valor}"  ></td>
+                <td th:text="${facturas.fechafactura}"  ></td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
